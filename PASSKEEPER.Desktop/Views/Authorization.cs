@@ -51,10 +51,5 @@ namespace PASSKEEPER.Desktop.Views
         {
             Pas_TBAvtor.UseSystemPasswordChar = !CH_B.Checked;
         }
-
-        private void Authorization_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -151,7 +151,6 @@ namespace PASSKEEPER.Desktop.Views
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
-            this.Load += new System.EventHandler(this.Authorization_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
