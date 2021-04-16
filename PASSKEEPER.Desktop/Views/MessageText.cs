@@ -22,9 +22,9 @@ namespace PASSKEEPER.Desktop.Views
         {
             using (UserContext db = new UserContext())
             {
-                Message message = new Message { Text = TB_message.Text };
+                Models.Message message = new Models.Message { Text = TB_message.Text };
 
-                //db.Messages.Add(message);
+                db.Messages.Add(message);
                 db.SaveChanges();
             }
         }

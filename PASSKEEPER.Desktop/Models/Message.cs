@@ -11,7 +11,7 @@ namespace PASSKEEPER.Desktop.Models
     public class Message
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdMessage { get; set; }
+        public int MessageId { get; set; }
         public string Text { get; set; }
     }
 }
