@@ -18,14 +18,24 @@ namespace PASSKEEPER.Desktop.Views
             InitializeComponent();
         }
 
-        private void Save_B_Click(object sender, EventArgs e)
+        private void MessageText_FormClosing(object sender, FormClosingEventArgs e)
         {
-            using (UserContext db = new UserContext())
+            if (DialogResult == DialogResult.OK)
             {
-                Models.Message message = new Models.Message { Text = TB_message.Text };
+                try
+                {
+                    String Text = TB_message.Text.Trim();
 
-                db.Messages.Add(message);
-                db.SaveChanges();
+                    if (String.IsNullOrWhiteSpace(Text))
+                    {
+                        throw new Exception("Сообщение не может быть пустым");
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    e.Cancel = true;
+                }
             }
         }
     }

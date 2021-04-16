@@ -65,23 +65,9 @@ namespace PASSKEEPER.Desktop.Views
         {
             Authorization authorization = new Authorization();
             authorization.ShowDialog();
+
             //Program.applicationContext.MainForm = new Authorization();
             //Program.applicationContext.MainForm.Show();
-        }
-
-        private void Registration_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                if (MessageBox.Show("Вы действительно хотите выйти?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
 
         private void CH_B_CheckedChanged(object sender, EventArgs e)

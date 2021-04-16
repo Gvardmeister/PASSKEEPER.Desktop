@@ -1,8 +1,9 @@
-﻿using System;
+﻿using PASSKEEPER.Desktop.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 
-namespace PASSKEEPER.Desktop.Models
+namespace PASSKEEPER.Desktop.Infrastructure
 {
     public class UserContext : DbContext
     {

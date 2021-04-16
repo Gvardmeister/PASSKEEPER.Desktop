@@ -76,7 +76,6 @@ namespace PASSKEEPER.Desktop.Views
             this.Save_B.TabIndex = 2;
             this.Save_B.Text = "&Сохранить";
             this.Save_B.UseVisualStyleBackColor = true;
-            this.Save_B.Click += new System.EventHandler(this.Save_B_Click);
             // 
             // TB_message
             // 
@@ -104,6 +103,7 @@ namespace PASSKEEPER.Desktop.Views
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сообщение пользователя";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MessageText_FormClosing);
             this.TLP_1.ResumeLayout(false);
             this.TLP_1.PerformLayout();
             this.ResumeLayout(false);
