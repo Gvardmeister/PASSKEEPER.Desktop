@@ -13,5 +13,9 @@ namespace PASSKEEPER.Desktop.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int MessageId { get; set; }
         public string Text { get; set; }
+
+        public int? UserId { get; set; }
+
+        public virtual User User { get; set; }
     }
 }

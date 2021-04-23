@@ -35,9 +35,6 @@ namespace PASSKEEPER.Desktop.Views
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.List_DGV = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Message1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Spisok_L = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.Exit_B = new System.Windows.Forms.Button();
@@ -45,6 +42,9 @@ namespace PASSKEEPER.Desktop.Views
             this.Update_B = new System.Windows.Forms.Button();
             this.Add_B = new System.Windows.Forms.Button();
             this.Description_LHeader = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Message1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.List_DGV)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
@@ -99,41 +99,6 @@ namespace PASSKEEPER.Desktop.Views
             this.List_DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.List_DGV.Size = new System.Drawing.Size(704, 540);
             this.List_DGV.TabIndex = 2;
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID.DataPropertyName = "Id";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ID.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ID.HeaderText = "Идентифкатор";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Login
-            // 
-            this.Login.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Login.DataPropertyName = "Login";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Login.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Login.HeaderText = "Логин";
-            this.Login.MinimumWidth = 6;
-            this.Login.Name = "Login";
-            this.Login.ReadOnly = true;
-            // 
-            // Message1
-            // 
-            this.Message1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Message1.DataPropertyName = "Name";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Message1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Message1.HeaderText = "Сообщение";
-            this.Message1.MinimumWidth = 6;
-            this.Message1.Name = "Message1";
-            this.Message1.ReadOnly = true;
-            this.Message1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Spisok_L
             // 
@@ -249,6 +214,41 @@ namespace PASSKEEPER.Desktop.Views
             this.Description_LHeader.Text = "ФункциАнал ";
             this.Description_LHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID.DataPropertyName = "MessageId";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ID.HeaderText = "Идентифкатор";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Login
+            // 
+            this.Login.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Login.DataPropertyName = "Login";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Login.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Login.HeaderText = "Логин";
+            this.Login.MinimumWidth = 6;
+            this.Login.Name = "Login";
+            this.Login.ReadOnly = true;
+            // 
+            // Message1
+            // 
+            this.Message1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Message1.DataPropertyName = "Text";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Message1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Message1.HeaderText = "Сообщение";
+            this.Message1.MinimumWidth = 6;
+            this.Message1.Name = "Message1";
+            this.Message1.ReadOnly = true;
+            this.Message1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // Message
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,6 +259,7 @@ namespace PASSKEEPER.Desktop.Views
             this.Name = "Message";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сведения";
+            this.Load += new System.EventHandler(this.Message_Load);
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.List_DGV)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);

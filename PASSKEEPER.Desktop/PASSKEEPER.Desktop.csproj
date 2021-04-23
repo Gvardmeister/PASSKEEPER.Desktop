@@ -58,6 +58,11 @@
   <ItemGroup>
     <Compile Include="Controls\PropertyComparer.cs" />
     <Compile Include="Controls\SortableBindingList.cs" />
+    <Compile Include="Migrations\202104231546323_AddMyFirstMigration.cs" />
+    <Compile Include="Migrations\202104231546323_AddMyFirstMigration.designer.cs">
+      <DependentUpon>202104231546323_AddMyFirstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Infrastructure\UserContext.cs" />
@@ -87,6 +92,9 @@
     <Compile Include="Views\Registration.designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Migrations\202104231546323_AddMyFirstMigration.resx">
+      <DependentUpon>202104231546323_AddMyFirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

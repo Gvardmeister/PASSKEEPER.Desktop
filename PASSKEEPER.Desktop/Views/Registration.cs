@@ -1,4 +1,5 @@
-﻿using PASSKEEPER.Desktop.Models;
+﻿using PASSKEEPER.Desktop.Infrastructure;
+using PASSKEEPER.Desktop.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
